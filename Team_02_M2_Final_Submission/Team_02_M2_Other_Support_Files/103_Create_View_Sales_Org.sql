@@ -1,4 +1,4 @@
-/* to be run in Products */
+/* to be run in Sales Org */
 
 if (exists(select name from sysobjects where name = 'Extract_Deal' and type = 'V'))
 	begin
@@ -9,9 +9,7 @@ go
 create view Extract_Deal
 as
 select	DLR_Code as DLR_Code,
-		DLR_Street as DLR_Street,
-		DLR_City as DLR_City,
-		DLR_State as DLR_State,
-		DLR_Zip as DLR_Zip
+		DLR_Phone as DLR_Phone,
+		DLR_Type as DLR_Type
 	from Dealer;
 go

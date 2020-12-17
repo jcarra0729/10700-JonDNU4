@@ -1,3 +1,5 @@
+/* to be run in Products */
+
 insert into Stage_Deal (
 						DLR_Code,
 						DLR_Street,

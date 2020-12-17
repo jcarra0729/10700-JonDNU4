@@ -8,10 +8,12 @@ go
 
 create table Stage_Deal
 	(
+	DLR_Key		numeric(18,0)	identity(1,1)	not null,
 	DLR_Code	varchar(15)	not null,
 	DLR_Street	varchar(60) not null,
 	DLR_City	varchar(60) not null,
 	DLR_State	varchar(60) not null,
-	DLR_Zip		varchar(60) not null
+	DLR_Zip		varchar(60) not null,
+	Constraint PK_Stage_Deal Primary Key Clustered (DLR_Key ASC)
 	);
 go

@@ -1,14 +1,12 @@
+/* to be run in Sales Org */
+
 insert into Stage_Deal (
 						DLR_Code,
-						DLR_Street,
-						DLR_City,
-						DLR_State,
-						DLR_Zip
+						DLR_Phone,
+						DLR_Type
 					)
 		select DLR_Code,
-				DLR_Street,
-				DLR_City,
-				DLR_State,
-				DLR_Zip
+				DLR_Phone,
+				DLR_Type
 		from Extract_Deal;
 go
