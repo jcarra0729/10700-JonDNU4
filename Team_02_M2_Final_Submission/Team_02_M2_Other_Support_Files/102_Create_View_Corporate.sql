@@ -10,15 +10,14 @@ create view Extract_Deal
 as
 select	w.WEB_ID	as WEB_ID,
 		DLR_Code	as DLR_Code,
-		CD_Name	as DLR_CD_Name,
-		ID_Name	as DLR_ID_Name,
-		DLR_Type	as DLR_Type,
+		COALESCE(CD_Name, ID_Name) as DLR_Name,
+		Case DLR_Type When 'C' then 'Corporate'
+								else 'Independent'
+				End As DLR_Type,
 		DLR_Email	as DLR_Email,
 		DLR_Since	as DLR_Since,
-		BR_County	as BR_County,
-		OADR_County as OADR_County,
-		BR_Country	as BR_Country,
-		OADR_Country as OADR_Country,
+		COALESCE(BR_County, OADR_County) as DLR_County,
+		COALESCE(BR_Country, OADR_Country)	as DLR_Country,
 		WEB_URL		as WEB_URL,
 		WEB_Admin	as WEB_Admin,
 		WEB_Start_Date	as WEB_Start_Date

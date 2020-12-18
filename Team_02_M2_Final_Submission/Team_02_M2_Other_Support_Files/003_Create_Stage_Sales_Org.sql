@@ -10,6 +10,6 @@ create table Stage_Deal
 	(
 	DLR_Code	varchar(15)	not null,
 	DLR_Phone	varchar(20) not null,
-	DLR_Type	varchar(1) not null
+	DLR_Type	varchar(30) not null
 	);
 go

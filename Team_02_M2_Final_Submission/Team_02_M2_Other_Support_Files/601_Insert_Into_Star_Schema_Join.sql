@@ -1,5 +1,12 @@
 /* to be run in Star Schema*/
 
+if (exists(select * from sysobjects where name = 'DEALER' and type = 'U'))
+	begin
+		delete from DEALER;
+	end;
+go
+
+
 set identity_insert [DEALER] ON;
 go
 
@@ -24,12 +31,12 @@ insert into DEALER(DLR_Key,
 					)
 			select	DLR_Key,
 					a.DLR_Code,
-					(Select DLR_CD_Name from [SEIS732_Team_02_Corporate].[dbo].[Stage_Deal] union Select DLR_ID_Name from [SEIS732_Team_02_Corporate].[dbo].[Stage_Deal]),
+					COALESCE(DLR_CD_Name, DLR_ID_Name),
 					DLR_Street,
 					DLR_City,
-					(Select BR_County from [SEIS732_Team_02_Corporate].[dbo].[Stage_Deal] union Select OADR_County from [SEIS732_Team_02_Corporate].[dbo].[Stage_Deal]),
+					COALESCE(BR_County, OADR_County),
 					DLR_State,
-					(Select BR_Country from [SEIS732_Team_02_Corporate].[dbo].[Stage_Deal] union Select OADR_Country from [SEIS732_Team_02_Corporate].[dbo].[Stage_Deal]),
+					COALESCE(BR_Country, OADR_Country),
 					DLR_Zip,
 					c.DLR_Type,
 					b.DLR_Type,
@@ -40,9 +47,12 @@ insert into DEALER(DLR_Key,
 					WEB_URL,
 					WEB_Admin,
 					WEB_Start_Date
-					from [SEIS732_Team_02_Products].[dbo].[Stage_Deal] a
-					inner join [SEIS732_Team_02_Corporate].[dbo].[Stage_Deal] b on a.DLR_Code = b.DLR_Code
-					inner join [SEIS732_Team_02_Sales_Org].dbo.Stage_Deal c on b.DLR_Code = c.DLR_Code
+					from	[SEIS732_Team_02_Products].[dbo].[Stage_Deal] a,
+							[SEIS732_Team_02_Corporate].[dbo].[Stage_Deal] b,
+							[SEIS732_Team_02_Sales_Org].dbo.Stage_Deal c
+					where
+					a.DLR_Code = b.DLR_Code AND
+					b.DLR_Code = c.DLR_Code
 					
 					;
 go

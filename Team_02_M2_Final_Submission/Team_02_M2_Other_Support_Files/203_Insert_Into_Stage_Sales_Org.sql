@@ -13,6 +13,9 @@ insert into Stage_Deal (
 					)
 		select DLR_Code,
 				DLR_Phone,
-				DLR_Type
+				Case DLR_Type When 'A' then 'All_Makes'
+							When 'B' then 'Behemoth'
+										else 'Packrat'
+				End As DLR_Type
 		from Extract_Deal;
 go
