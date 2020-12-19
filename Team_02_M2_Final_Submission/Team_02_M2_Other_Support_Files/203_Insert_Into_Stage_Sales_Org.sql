@@ -2,7 +2,7 @@
 
 if (exists(select * from sysobjects where name = 'Stage_Deal' and type = 'U'))
 	begin
-		Delete from Stage_Deal;
+		Delete from Stage_Deal
 	end;
 go
 

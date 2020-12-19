@@ -2,7 +2,7 @@
 
 if (exists(select * from sysobjects where name = 'Stage_Deal_SO' and type = 'U'))
 	begin
-		drop table Stage_Deal_SO;
+		drop table Stage_Deal_SO
 	end;
 go
 
