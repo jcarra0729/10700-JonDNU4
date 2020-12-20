@@ -16,7 +16,8 @@ create table Stage_Vehicle_Type
 	PRD_Model_Year										varchar(10)					not null,
 	PRD_Manufacturer_Suggested_Retail_Price				money						not null,
 	PRD_Wholesale_Price									money						not null,
-	MMC_ID												smallint					not null,
+	--PRD_MMC_ID											smallint					not null,
+	PRD_Color_Key									smallint					not null, 
 	CONSTRAINT	PK_Stage_Vehicle_Type	PRIMARY KEY CLUSTERED (PRD_Key ASC)
 	);
 go

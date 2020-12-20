@@ -14,7 +14,8 @@ create table Stage_Model
 	PRD_Model_Key			smallint identity(1,1)		not null,
 	PRD_Model_Name			varchar(40)					not null,
 	PRD_Model_Description	varchar(256)				not null,
-	MMC_ID					smallint					not null,
+	PRD_Make_Key			smallint					not null, 
+	--PRD_MMC_ID			smallint				not null,
 	CONSTRAINT PK_Stage_Model	PRIMARY KEY CLUSTERED (PRD_Model_Key ASC)
 	);
 go

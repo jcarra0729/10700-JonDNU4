@@ -12,19 +12,30 @@ go
 
 create view Extract_Color
 as
-select    
-        CLR_ID															as		PRD_Color_ID
-		CLR_Description                                                 as    PRD_Color_Description,
-        Stage_Class.MMC_ID                                       		as    PRD_Class_Key,
-        CLR_Name                                                  		as    PRD_Color_Name
-from    
-		Color,
-        Stage_Class;
-/*where     
-        MMC.MMC_ID    =    Stage_Class.MMC_ID;*/
+select  distinct
+        --v.MMC_ID                                                  	as		PRD_MMC_ID,
+        r.CLR_ID														as		PRD_Color_ID,
+		c.CLR_Description												as		PRD_Color_Description,
+        c.CLR_Name														as		PRD_Color_Name,
+		s.PRD_Class_Key													as		PRD_Class_Key
 
+
+FROM
+
+Vehicle_Type v,
+Stage_Class s,		
+
+RRV_Instance r INNER JOIN Color c ON c.CLR_ID = r.CLR_ID
+
+where 
+
+v.VT_ID = r.VT_ID
+--and s.PRD_MMC_ID = v.MMC_ID
+;
 
 go
 
 
+;
 
+go

@@ -11,15 +11,20 @@ go
 
 create view Extract_Class
 as
-select    
-        MMC_Class_Desc                                                  as    PRD_Class_Description,
-        Stage_Model.MMC_ID                                       		as    PRD_MMC_ID,
-        MMC_Class_Name                                                  as    PRD_Class_Name
+select   distinct
+		MMC_ID												as	PRD_MMC_ID
+        ,MMC_Class_Desc                                      as    PRD_Class_Description
+        ,MMC_Class_Name                                      as    PRD_Class_Name
+		,mo.PRD_Model_Key									as 		PRD_Model_Key
 from    
-        MMC,
-        Stage_Model
-where     
-        MMC.MMC_ID    =    Stage_Model.MMC_ID;
+
+MMC,
+Stage_Model mo
+
+where 
+
+MMC.MMC_Model_Name = mo.PRD_Model_Name
+
 
 
 go

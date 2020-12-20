@@ -13,11 +13,12 @@ go
 
 create view Extract_Make
 as
-select
+select distinct
 
+	--MMC_ID			as	PRD_MMC_ID,
 	MMC_Make_Name	as	PRD_Make_Name,
-	MMC_Make_Desc	as	PRD_Make_Description,
-	MMC_ID			as	PRD_MMC_ID
+	MMC_Make_Desc	as	PRD_Make_Description
+	
 
 from MMC;
 

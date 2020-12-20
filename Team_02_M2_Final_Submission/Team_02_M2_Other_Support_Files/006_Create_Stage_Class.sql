@@ -11,10 +11,11 @@ go
 
 create table Stage_Class
 	(
-	PRD_Class_Key			smallint	identity (1,1)	not null,
-	PRD_Class_Name			varchar(40)					not null,
-	PRD_Class_Description	varchar(256)				not null,
-	MMC_ID					smallint					not null,
+	PRD_Class_Key				smallint	identity (1,1)	not null,
+	PRD_Class_Name				varchar(40)					not null,
+	PRD_Class_Description		varchar(256)				not null,
+	PRD_MMC_ID					smallint					not null,
+	PRD_Model_Key				smallint					not null,
 	CONSTRAINT PK_Stage_Class	PRIMARY KEY CLUSTERED (PRD_Class_Key ASC)
 	);
 go

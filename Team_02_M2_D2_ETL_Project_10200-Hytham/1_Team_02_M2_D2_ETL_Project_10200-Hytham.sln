@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Team_02_M2_D2_ETL_Project_10200-Hytham", "Team_02_M2_D2_ETL_Project_10200-Hytham\Team_02_M2_D2_ETL_Project_10200-Hytham.dtproj", "{D69A7D8E-782D-482D-A09B-3E65A73DD24A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D69A7D8E-782D-482D-A09B-3E65A73DD24A}.Development|Default.ActiveCfg = Development
+		{D69A7D8E-782D-482D-A09B-3E65A73DD24A}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A554145-6368-4DFB-A368-E0DFCC9A30AB}
+	EndGlobalSection
+EndGlobal

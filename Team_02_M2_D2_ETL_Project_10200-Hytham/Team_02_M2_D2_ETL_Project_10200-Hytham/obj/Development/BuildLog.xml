@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectInfo>
+    <Name>Team_02_M2_D2_ETL_Project_10200-Hytham</Name>
+    <LastWriteTime>2020-12-19T03:25:31.1853264Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>dXL+MFeE</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxmpzdWCw4Ua0s0dp2mQ3KQAAAAACAAAAAAAQZgAAAAEAACAAAACTQpqDLFzxm00uRReZy/n1FQBZeFCBvcbPdMoUZt2jxQAAAAAOgAAAAAIAACAAAAAV8GaP+YLmRih8/b8xIhkAwtDO/XPqj0m505G+0JnuCjAAAACW+ALUICfXliR7kO6iWf/eQf7S3341K8bvMEpUFfYuwq5UxvyDk2zKIve/6+J8/gJAAAAAw3k7328PpTa3U7glNwoZesbz+hwappdYvoTEX9Ygj/YGmTH28gIEP6qmXxCyRFm55g6TqiF09CCdMuG0QyRtEw==</LastKnownProtectedHashedPassword>
+  </ProjectInfo>
+  <LastBuildInfos>
+    <ProjectBuildItemInfo>
+      <Name>Package.dtsx</Name>
+      <LastWriteTime>2020-12-20T00:19:55.4715662Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>CrSQc7Ip</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxmpzdWCw4Ua0s0dp2mQ3KQAAAAACAAAAAAAQZgAAAAEAACAAAADE+/zp59l0/D1P3Xg69k+eaYupC+UIdwCBlrqYrDoVjAAAAAAOgAAAAAIAACAAAABOdD8UNYkshuytjoiHGz60W4uF02+4cDxfckpqto8H5jAAAADpG6L6MAkkeEoC1IpOcg6Jeupvti4ObSjodQoWnnqHrruADCqTuBvINxfIP3hwnyJAAAAAVsLqOEGcpRV6vOLluULPcn1SfC5fRKKyqrmZvyvyRTYS7HXjawAvBH2z9Kbh15fENwCXjkm2foCC8aY0rH4wbQ==</LastKnownProtectedHashedPassword>
+    </ProjectBuildItemInfo>
+  </LastBuildInfos>
+</BuildLog>

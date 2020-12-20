@@ -12,23 +12,31 @@ go
 
 create view Extract_Vehicle_Type
 as
-select    
+select   distinct
         
-		VT_ID				as 			PRD_VehicleType_ID,
-		v.MMC_ID			as 			PRD_MMC_ID,
+		--c.PRD_MMC_ID		as			PRD_MMC_ID,
+		r.VT_ID				as 			PRD_VehicleType_ID,
 		VT_Model_Year		as			PRD_Model_Year,
 		VT_MSRP				as 			PRD_Manufacturer_Suggested_Retail_Price,
-		VT_Wholesale_Price 	as 			PRD_Wholesale_Price
+		VT_Wholesale_Price 	as 			PRD_Wholesale_Price,
+		c.PRD_Color_Key		as			PRD_Color_Key
+
 
 		
 from    
         Vehicle_Type v,
-		MMC m
+		Stage_Color c,
+		RRV_Instance r,
+		Stage_Class sc
 where     
-        m.MMC_ID    =    v.MMC_ID;
+		
+		c.PRD_Color_ID = r.CLR_ID
+		and
+		r.VT_ID = v.VT_ID
+		and sc.PRD_MMC_ID = v.MMC_ID
+		and sc.PRD_Class_Key = c.PRD_Class_Key
+		
+		;
 
 
 go
-
-
-
